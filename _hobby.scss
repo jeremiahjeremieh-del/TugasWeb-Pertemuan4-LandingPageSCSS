@@ -1,0 +1,17 @@
+#hobi {
+  article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  h3 {
+    margin: 0;
+    color: var(--secondary-color);
+  }
+
+  p {
+    margin-top: 5px;
+    color: var(--muted-color);
+  }
+}

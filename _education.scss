@@ -1,0 +1,14 @@
+#pendidikan {
+  article {
+    display: grid;
+    gap: 12px;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 15px 20px;
+    border-left: 4px solid var(--secondary-color);
+    background-color: var(--background-color);
+    border-radius: 8px;
+  }
+}

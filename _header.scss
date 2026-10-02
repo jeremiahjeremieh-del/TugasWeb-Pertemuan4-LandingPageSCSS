@@ -1,0 +1,13 @@
+@use "../abstracts/mixins" as mixins;
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--card-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+  @include mixins.container;
+}

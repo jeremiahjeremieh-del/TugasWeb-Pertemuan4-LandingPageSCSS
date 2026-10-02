@@ -1,0 +1,96 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as mixins;
+
+@use "base/reset";
+@use "base/typography";
+
+@use "components/navigation";
+@use "components/buttons";
+@use "components/forms";
+
+@use "layout/header";
+@use "layout/main";
+@use "layout/footer";
+
+@use "pages/home";
+@use "pages/about";
+@use "pages/education";
+@use "pages/hobby";
+@use "pages/contact";
+
+@use "themes/dark";
+@use "vendors/vendor";
+
+
+$spacing-map: (
+  xs: $spacing-xs,
+  sm: $spacing-sm,
+  md: $spacing-md,
+  lg: $spacing-lg,
+  xl: $spacing-xl
+);
+
+@each $name, $value in $spacing-map {
+  .mt-#{$name} {
+    margin-top: $value;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: $value;
+  }
+
+  .p-#{$name} {
+    padding: $value;
+  }
+}
+
+
+@include mixins.respond-to(tablet) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #beranda {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #beranda figure {
+    order: -1;
+  }
+
+  #hobi article {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 25px;
+  }
+}
+
+
+@include mixins.respond-to(mobile) {
+  main {
+    padding: 20px 12px;
+  }
+
+  #beranda h1 {
+    font-size: 38px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  nav ul {
+    gap: 10px;
+    font-size: 14px;
+  }
+}
